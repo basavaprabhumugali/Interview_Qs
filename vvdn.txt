@@ -1,0 +1,9 @@
+why dts, why not in 
+
+ROM code -> nitialize th minimal h/w 
+SRAM -> This is part of process it in kb size
+
+how to choose emmc/NAND ?
+h/w -> swtiching will be their 
+we will specify configuration of emmc/NAND in bootloader  
+

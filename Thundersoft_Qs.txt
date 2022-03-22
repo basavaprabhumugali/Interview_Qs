@@ -1,0 +1,22 @@
+Thundersoft Interview Q's
+
+How driver and usper-pace link ?
+major minor number -> it is present in VFS layer
+cdev -> cdev_init-> initialize the file system
+adev_add -> filesysytem we add to major and minor number  -> this is link
+udev_node -> device node ->  cdev_init o/p and device node
+create device node
+
+
+US : open -> in VFS layer 
+
+
+Copy_from_user and copy_to_user -> 
+
+what is IOCTL:? -> to communicate to driver -> ex: to toggle a bit ...etc 
+
+Interrrupt ? Bottem and top halves? -> task hould be disturb , BH-> minimal thing , TP-> later task
+
+Basav- reverse ? at same location ? -> pass string , find find length, find mid of string, and start 
+a=a+b-(b=a)
+ 

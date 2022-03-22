@@ -1,0 +1,35 @@
+IPC
+
+Shared memory
+
+int id;
+id=shmget(key , no.of bytes , flag);
+id=shmegt(5,50,IPC_CREAT|0664);
+
+char *p;
+p=shmat(id, address where you want to attach , FLAG);
+p=shmat(id,NULL,NULL);
+p= it has address of shared memory/.
+scanf("%d",p);
+
+shmat(shmaddr);
+shmat(p);  
+
+
+Semaphore
+
+semget(key,num of semaphore, flag);
+semctl(id,sem number, GETVAL/SETVAL, setval to what);
+semops(id,&v,1);
+struct sembuf{
+	sem_num
+	sem_ops
+	sem_flag
+}
+
+FIFO
+
+- unrealted process
+- everything tis stored in kenrel space
+- fd=mkfifo("pathname", flag)
+  fd=mkfifo("f1",O_WRONLY|O_RDONLY);

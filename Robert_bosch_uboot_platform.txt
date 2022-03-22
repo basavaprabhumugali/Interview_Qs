@@ -1,0 +1,30 @@
+WAP to identify is linked list circular linked list or not
+
+strcut Node{
+	int data;
+	strcut Node *next;
+	strcut Node *prev;
+
+};
+
+ 1->2->3->4
+
+
+void identify(struct Node *hptr )
+{
+		strcut Node *last=head;
+		
+		do{
+			last=last->next;
+		}
+		while(last == head && last)
+		
+		if(last == head)
+			printf("It is Circular linked list");
+
+
+}
+
+synchronization 
+
+

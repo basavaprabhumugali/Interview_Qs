@@ -1,0 +1,59 @@
+
+Q1. typedef struct {
+		int i:8;
+		char c:8;
+		short s:8;
+	} X;
+	
+	printf("Size of X : %d", sizeof(X));
+	
+Ans: 4 bytes 
+-------------------------------------------------------
+
+Q2. define a macro MAX that takes two inputs and gives the maximum of the two.
+
+Ans:
+#define (a,b)  a>b?a:b 
+-----------------------------------------------------------
+
+Q3. declare fp as pointer to function (pointer to function (void) returning void) returning array 10 of int
+
+Ans:
+      int *fp( void (*fp)(void)) ;
+--------------------------------------------------------------
+
+Q4. For a given sorted array, write a program that finds all a[i] & a[j] , 
+such that a[i] + a[j] = S, where S is provided and length of array is provided as N
+Algorithm should of O(n).
+
+int A[] = {1,2,3,4,5,7,8,9,11,13,15,16,17,19,20,25,100}
+int S = 21
+int N = length of the array.
+
+ex: (1,20) (2,19) ....
+
+void tuple(int *arr)
+{
+	int i,j;
+	int tmp;
+	
+	for(i=0;i<N;i++)
+	{
+		tmp=S-a[i];
+		 for(j=N-1;j>=0;j++)
+		 {
+			if(tmp == arr[j])
+			{
+				printf("i=%d , j=%d \n",i,j);
+					break;
+			}
+			else if(arr[j] < tmp)
+				break;	
+		 }
+			
+	}
+
+}
+
+
+

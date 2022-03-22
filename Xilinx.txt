@@ -1,0 +1,102 @@
+
+WAP which takes 32 bits , 8 bit 
+
+int n,   first 12 bit zero, next 8bit as next input , top 6 bits toggle it
+char n;
+
+
+i/p 0000 0000 0000 0000 0000    0000 0000 0000
+n= 3  0000 0011 
+
+
+void bit_manupulation(int n, char ch)
+{
+	int i,j;
+	int bit;
+	
+	// 1st 12 bit 0
+	for(i=0; i < 12 ; i++)
+	{
+		n=n&~(1<<i);      // clear the bit
+	}
+	
+//	n & ~(0000 0000 0000 0000 0000 0011 1111 1111);
+	// 1st 12bit 0
+	n=n&~(512);
+	
+	
+	
+	//next 8 bit as next input 
+	for(i=12,j=0; i <20 && j<8 ; i++,j++)
+	{
+		bit=ch & (1 << j);  // check bit in ch
+		if(bit)
+			n=n|(1<<i);    // to set bit
+		else
+			n=n&~(1<<i);   // to clear bit
+	}
+
+
+	int num =(int)ch;
+	ch=ch << 12;
+	
+	n = n | ch;
+
+	
+	// top 6 bit toggle it
+	
+	for(i=31 ;i>25 ;i--)
+	{
+		n=n^(1<<i);        // toggle the bit
+	}
+
+}
+
+
+/proc/interrupt 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

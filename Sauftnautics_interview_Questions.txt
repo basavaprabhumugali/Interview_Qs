@@ -1,0 +1,159 @@
+WAP to 
+
+1
+12
+123
+1234
+12345
+
+
+extern int k;   /* initiualized to zero ,  it can be accessed by any of file member*/
+main()
+{
+
+static int k; /* initiazied to zero but it can't be again again initized */
+
+
+
+int i,j;
+
+	for(i=0;i<5;i++){
+   		for(j=0;j=<i;j++)
+			printf("%d",j+1);
+   	printf("\n");
+	}
+
+
+}
+
+
+
+2- bool division(int a, int b, int c, int d)
+ return True if a/b is mathematically equal to c/d
+
+a=5 , b=2
+c=11 , d=4 
+
+6/2 = 12/4
+
+b= 0 
+
+bool division(int a, int b, int c, int d)
+{
+    bool i;
+    float i,j;
+      i=(float) (a/b);   /*    floating point error ?8
+      j=(float) (c/d);
+
+	if (i == j )
+		return true;
+        else
+              return false;
+
+
+OR
+        return (i == j ) ? true : false;   /* conditional operator   */
+
+
+}
+
+
+
+
+
+
+4.4 -> 4.14 
+
+
+
+2- driverr development for qualcomm 
+
+
+msm8996 
+
+3 processor
+1- APPS process , 2- Modem process 3- RPM process
+
+1-Hard-coded into chip PBl- > Primary bottler will pick SBL for APPs process
+                         SBL -> load images of APPs prcessor  and in b/w security zone QSEE validate the image is it coorect or not : if Ok it will aloow it to boot on apps process
+                             -> load images on Modem process and in b/w security zone (QSEE) validate image and if oK them load it
+
+  loading mean -> >   It will load HLOS  >  initiall our linux will boot up -> initialize all our file systems , every hardware parts , RFS .. etc
+
+                       after linux is boot up -> 1st user space proccess will run INIT process (changes to systemd process)
+                          This process will initialze all userspace componets or apps , deamons and all 
+
+
+Synchroniztions;
+
+
+
+                data          
+P1                                       P2
+
+case 1: 
+   P1 can read/write the date when  P2 is not accessing data  and vice-versa   otherwise data will get corrupt 
+mutex , spinlock and semaphores to do synchronization operation .
+
+
+Mutexs->  is for thread  , it can't be used in interrupts, -> it will make process to sleep until data is avalibale .
+spinlock :  id data is already locked -> ir will make process to spin to wait untill data is availabe .
+
+
+
+
+
+
+
+
+1- shutdown driver 
+
+
+1- init function:- we have to initialz eour requirenmnets 
+2- exit function:  atlast if we no more need driver then we can do deregister to our all initilzed things so that we hsould not make any unnessery m
+
+3- File operations
+4- probe function 
+ 
+ module 
+
+config file: 
+Kconfig:   
+Makefle
+
+
+5- DTS file 
+
+  dtbo.image 
+   reg :  2 arguments
+       <address , displacment(size of the register)>
+
+cells= 4 bytes
+
+   <0x089, 2 (2 cells= 8 bytes)>
+
+
+ISR -> Interrupt service routine
+    -> atomic opertaion
+    
+
+
+Klockwork-> P1 , misra-> P2 and FOSSID-> securty 
+
+
+struct temp{
+	int i;    /* 4 bytes   */
+        char a;  /* 1 bytes */
+}	
+Concet of Padding:-      multiple of highest of size of any member 
+ 
+--->4<---->4<-----
+
+sizeof(temp)=   8 bytes 
+
+union temp{
+	int i,
+        char a;
+} 
+
+sizeof(temp)= 4 bytes   /* size of union is largest size of any of its member */

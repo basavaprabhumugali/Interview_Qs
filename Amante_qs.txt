@@ -1,0 +1,57 @@
+array of function points and call function pointers
+
+main()
+{
+	// declearing array of 5 int function pointers
+	int *arr[5];
+	
+	calling functions
+	arr[1];
+	
+
+}
+
+
+
+two array and 
+
+
+
+main()
+{
+	arr1[3]={2,5,7};
+	arr2[3]={3,1,5}
+	out[6];
+	
+	int i=0,j=0,k;
+	
+	
+	for(k=0;i<3 && j<3 ;k++)
+	{
+		if(arr1[i] < arr2[j])
+		{
+			out[k]=arr1[i]
+			i++;
+		}
+		else
+		{
+			out[k]=arr2[j]
+			j++;
+		}
+	
+	}
+	
+	if(i!=3)
+	{
+		for(;i<3;i++,k++)
+			out[k]=arr1[i];
+	}
+	
+	if(j!=3)
+	{
+		for(;j<3;j++,k++)
+			out[k=arr2[j];
+	
+	}
+	
+}

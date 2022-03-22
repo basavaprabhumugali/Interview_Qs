@@ -1,0 +1,73 @@
+A Career at HARMAN
+
+We are ONE HARMAN. We are greater than the sum of our divisions or brands. We proudly talk about our many iconic brands and describe how our technologies are transforming the car, the workplace and everywhere in between.  We work hard. We create useful, playful, beautiful things. We strive for excellence and we aim to win as a team. No matter the position, every employee at HARMAN is expected to demonstrate our core competencies:  leadership, change-orientation, collaboration, judgment and a results-driven mindset.  At HARMAN, we expect brilliance.  You can expect a career full of brilliant possibilities. 
+
+ 
+
+JOB DESCRIPTION :
+
+ 
+
+SW Engineer
+
+ 
+
+What You Will Do
+
+·        Understanding of the system software, system architecture, design methodologies, software platform integration with hardware bring up
+
+·        Owns the Code and Repository for the related domain/repo
+
+·        Responsible to conduct code reviews and ensure review comments are closed.
+
+·        Assesses feature reusability between Platform and Customer projects during RFQ phase as well as during project execution working closely with PO
+
+·        Responsible for design and ensuring that code is developed as per design
+
+·        Assists PO in requirements grooming and provides tech support for Customer meetings on need basis
+
+·        Assist PO / Engg Manger in PI & Sprint planning and back log estimations
+
+ 
+
+What You Need
+
+·        Linux kernel driver expertise (3.10 kernel or beyond) having worked on ARM-linux
+
+·        Good understanding of device trees in Linux
+
+·        Knowledge of tools like gerrit/stash
+
+·        JTAG based hardware debugger (preferably Lauterbach usage) knowledge
+
+·        Good understanding of hypervisor.
+
+·        Good understanding of memory management/Interrupt handling/DMA subsystems in Linux kernel
+
+·        Good knowledge of ARM GIC, Timers, debug subsystem(ARMv8 architecture) is an added advantage
+
+·        Experience working with upstream kernel.org community
+
+·        Good understanding of  debugging system software on embedded target using debugging tools like GDB, ftrace, strace etc. and analyzing of core dumps
+
+·        Hands-on experience in Cluster & Infotainment Application development for Automotive Electronics systems.
+
+·        Deep experience in Instrument Cluster / Infotainment System / Android SW development
+
+·        Experience in Multilayered Software architecture.
+
+·        Experience in hard real time, embedded systems.
+
+·        Experience in working with Linux, QNX Neutrino, QNX Screen and Graphical Frameworks
+
+·        Proficiency in programming with C, C++.
+
+·        Working knowledge on Virtualization (Container / Hypervisor) is an added advantage
+
+·        Experience in Agile methodologies, Configuration and Project Management tools
+
+ 
+
+ Regards
+
+Manaswini

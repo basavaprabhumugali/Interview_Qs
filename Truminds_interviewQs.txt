@@ -1,0 +1,198 @@
+
+1- WAP to delete the duplicate char in a stting ? 
+string  C ="helloword" -> remove repeating char
+
+main()
+{
+
+	int i=0,j=0,k=0;
+	for(i=0;c[i];i++) // provides length of string
+	
+	//logic 
+	for(j=0; j<i ; j++)
+	{
+	    if(c[j] == c[j+1] )   // compare 
+		{
+			for(k=j;k<i;k++)
+				c[k]=c[k+1]
+			j--;
+		}
+			
+	}
+
+// Main logic
+	for(j=0;j<i ; j++)
+	{
+		for(k=0;k<i;k++)
+		{
+			if(i!=k && c[j] == c[k])  
+				for(z=k;z<i;z++)
+					c[z]=c[z+1]; 
+		}
+	
+	}
+}
+
+
+2-  WAP to insert a no. in given SLL in asending order ? 
+  SLL  All nodes in asending order
+    int data 
+	2 4 20 62 141 
+	
+	WAP -> ptr to head node , int 
+
+
+ struct student
+{
+	int rollno.
+	strct student *next;
+}SL;
+
+void insert_middle(SL *ptr , int nu)
+{
+	
+	SL *new = (SL*)malloc(sizeof(SL));
+	new->rollno=nu;
+	
+	if(ptr==0 || (ptr->rollno > new->rollno))  //
+	{
+		new->next=ptr;
+		ptr=new;
+	
+	}
+	else
+	{
+		SL *last=ptr;
+		while(last->next!=0 && (last->next->rollno < new-rollno))  (4 < 25) (20 < 25)
+			last=last->next;
+			
+		new->next=last->next;
+		last->next=new;
+	
+	}
+
+
+
+}
+
+
+
+3: What is imprtance if extern keyword ?
+Extern 
+
+file1.c
+extern int i; 
+
+
+file2.c 
+extern int i=10;
+
+
+4- Explain process and threads and diff and importance of each.
+Importance process & Threads 
+
+5- How to create thread and processes?
+pthread_create()
+
+how do u create another process 
+fork()
+
+
+
+6- What are IPC mechanisms and their syscalls ?
+IPC 
+what are the APIS used in all IPC mechanisms like share memory ?
+smget , smrec 
+
+
+7- QC Q's
+Andriod debugging tools
+
+8- kernel concpets
+workques, waitqueus, tasklets , sorftirqs 
+
+
+
+
+
+9- lerning project
+proprocess Stage
+.i
+
+functions :
+1- include header files
+2- remove all comments  
+3- include code inder condtion compilation (#if def) 
+
+// 
+/*  */
+
+
+
+10:  what are different Debugger ?
+
+printk 
+
+GDB 
+11- how to use DDB ?how to put break points ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

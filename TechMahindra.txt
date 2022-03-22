@@ -1,0 +1,95 @@
+1- Boot Process
+2- Interrrupt bottom halves and upper havles
+3- How chardev works?
+4- copy_to_user and copy_to_kernel ?
+5- How systemcall works?
+
+6- Print the numbers as 12 and 678 in the string "hello123world678"
+
+main()
+{
+
+	char *str="hello123world678"
+	int len=0,i=0, sum=0;
+	int flag;
+
+	len=strlen(str);
+	
+	flag=0;
+	for(i=0; i<len; i++)
+	{
+		
+		if(str[i] >= '0' || str[i] <= '9' )
+		{	// sum=sum + atoi(str[i]);
+			
+			sum=sum*10 + atoi(str[i]);
+			flag=1;	
+		}else
+			flag=0;
+		
+		if(flag==0)
+		printf("sum = %d \n",sum);
+	}		
+	
+	
+
+}
+
+
+
+
+2- WAP:  print data in SLL using recursion ?
+
+Logic:
+   
+     void print_recusion(node *ptr)
+	{
+		if(ptr)
+		{
+			print_recursion(ptr->next);
+			printf("PRINT THE DATA")
+
+		}
+
+	}
+
+3- malloc(0)
+
+   5bytes
+
+  0->size of memory allocated  1 2 3 4 5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

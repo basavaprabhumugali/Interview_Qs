@@ -1,0 +1,204 @@
+WAP tp remove the dup elements
+   2->  3->      3->5->9->12->15->15
+prev    present
+
+struct dup_list{
+
+	int data;
+	struct dup_list *next;
+}
+
+
+void dup_rm(struct duP_list  *hptr)
+{
+
+	struct dup_list *prev, *present, *tmp;
+	
+	/* delete duplicate a node  */	
+	if(hptr != NULL)    // check hptr is enpty or not 
+	{
+		prev=hptr;
+		present=hptr->next;
+		while(present)
+		{
+			
+			if(prev->data == present->data)
+			{
+ 				tmp=present;
+				present=present->next;
+				prev->next=present;
+			
+				free(tmp);
+				continue;
+			}
+			prev=prev->next;
+			present=present->next;
+		
+	}
+			
+			
+}		
+			
+	
+
+
+WAP
+i/p -4->5->7->9->11->15->21->35->39
+i/p position -> 3
+
+
+void remove_position(struct list *hptr, int pos)
+{
+	
+	struct list *first=hptr, *second=hptr, *prev;
+	int i,j;
+	
+	for(i=0;i<pos;i++)
+	{
+		if(first)
+			first=first->next;
+		else
+			return -1;
+	}
+	
+	while(first != NULL)
+	{
+			first=first->next;
+			prev=second;
+			second=second->next;
+			
+	}
+	
+	// delete second node
+	prev->next=second->next;
+	free(second);
+		
+}
+
+
+
+write() (__NR__foo no. 
+
+sys_write
+
+write()
+
+
+what is kernel preeemtion ?
+What is spinlock, mutex, schconization ?
+What is Interrupt? Top and Bottom Halves ? 
+Tasklet, Workqueue , Softirq.
+
+What are spinlock 
+
+I2C Frame
+Write :
+
+S | Address( last bit R/W) | ACK | memory addr | ACK | write data | ACK | stop
+
+Read
+ 
+S | Address(W) | ACK | M/r | ACK | Start | Adress(R) | ACK | Read data  | Stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+		
+			
+			if(prev == hptr){    // 
+				hptr=prev->next;
+				prev=presnet;
+				present=present->nehptxt;
+				tmp=prev;
+			}
+			else{
+				prev->next= present->next;
+				present=present->next;
+				tmp=present;
+			}
+			free(tmp);
+		
+		}
+		prev=present;
+		present=present->next;
+	
+	
+	}
+
+
+}

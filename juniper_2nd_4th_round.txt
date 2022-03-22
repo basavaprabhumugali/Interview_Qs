@@ -1,0 +1,128 @@
+
+
+main()
+{
+char *str = "Bangalore";
+printf("%s", str);
+str++;
+printf("%s", str);
+*str = 'A';
+printf("%s", str);
+}
+
+Bangalore
+angalore
+
+
+int printf(char *s,...);
+
+str - > Bangalore is in Karnataka
+o/p -> erolagnaB is ni akatanrak
+
+
+main()
+{
+	char s[]="Bangalore is in Karnataka"
+	int i,j,k,l;
+	
+	char tmp;
+	
+	for(l=0;s[l];l++);  // counts length of string
+	
+	k=0;
+	for(i=0; s[i] ;i++)
+	{
+		if(s[i] == ' ' || s[i+1]== '\0')
+		{
+			if(s[i] == ' ')
+				j=i-1;
+			else
+				j=i;
+		
+			for(;j>k;j--,k++)     // reverse the string
+			{
+				tmp=s[k];
+				s[k]=s[j];
+				s[j]=tmp;
+			
+			}
+		}
+		k=i+1;
+	}
+	
+}
+
+
+WAP set n bits starting from M
+
+m = 4
+n= 2 
+...0000 0000 0000 1100
+o/- ...  0000 0000  0011 1100
+
+#define (x,m,,n)  while(m < m+n){ 
+                  x= x | (1<< m); \
+				  m++;
+				  } \
+				  
+#define (x,4,2) x|(3<<5)
+
+
+Responsibilities
+
+You will be part of this platform team, responsible for developing platform software in the areas of:
+Board-bring up related experience.
+10G, 40G, 100G and 400G interface related platform software like interface drivers etc.
+Platform infrastructure related software like Chassis/line card, fabric, Optics etc.
+You will be responsible for these product developments in the platform area in either JunOS or Junos Evoled based software architecture.
+In addition to the development activity, you are required to work closely with system and solution test teams to ensure products/solutions delivered are with highest quality.
+You will be required to work closely with Juniper Technical Assistance Team for providing engineering assistance in supporting critical customer escalations for customer deployments.
+Requirements
+
+BTech / MTech in CS/CE or related field with 2-5 years proven experience.
+In-depth knowledge of data networking, e.g., TCP/IP, Ethernet, and Routing etc.
+Proficiency with device drivers, system bring-up, FreeBSD/Linux internals.
+Understanding of Ethernet, OTN, SONET etc. technologies desired
+Strong technical, analytical, and problem-solving skills.
+Strong in C, C++ programming, OO analysis & design, data structures and system debugging skills.
+Good understanding of firmware, hardware level details for Optics, PCIe, SPI, I2C, Retimers, FPGA, CPLD, MDIO, Flash Driver
+Prior software development experience on networking products would be a plus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

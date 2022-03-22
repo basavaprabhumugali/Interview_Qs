@@ -1,0 +1,120 @@
+
+Q- WAP to write given value in mem location starting from begin it upto end bit.   
+int value=3;
+int *mem;    need to wirte value to this  starting from begin to end index ?
+int begin_index=4;
+int end_index=7;
+
+00001001 00000000 00000000 0000000 1010 0000
+                           0000000 0011 0000
+
+
+void bit_manupulation()
+{
+	bit value=3;
+	
+	int i,j,m;
+	
+	// find which bit of value is set
+	
+	j=begin_index;
+	for(i=0; i<= (end_index - begin_index); i++)   //  3=7-4    i=0  to 3
+	{
+		 m=(value >> i) & 1;        // check bits of value   0011
+		  
+		 if(m)
+			*mem= *mem | (1<<j);   // set the bit if value bit is 1
+		else
+		    *mem= *mem & ~(1<<j);    // clear the bit  if value bit is 2
+		   
+		j++;
+	
+	}
+	
+
+}
+
+
+Q- WAP to to comapre two string ignoring case.
+Two string 
+ char *str1= "qualcomm123" , *str2="sasken123";
+ 
+ Ignoring the case of char 
+ 
+ int my_str()
+ {
+	char *str1, *str;
+	
+	int i,j;
+	
+	for(i=0; str1[i] && str2[i] ;i++)
+	{
+		if(str1[i]>='a' && str1[i]<='z')
+			str1[i]=str1[i]-32;      // convert all to uppercase
+			
+		if(str2[i]>='a' && str2[i]<='z')
+			str2[i]=str2[i]-32;      // convert all to upper case
+				
+		if(str1[i] != str2[i] )      // comparison
+			break;
+	}
+	
+	if(str1[i] == str2[i])
+		return 1;       // means same
+	else
+		return 0;       // means not same
+ 
+ }
+ 
+Q- Atomic Operation ?   (An Interrupt can interrupt automic operation)
+Q- on single core processor which ne to choose Process or multi threading  ?
+
+Q- optimization techniques  ?
+
+Q- What is page fault and how can we recover from it ?
+
+Q- Struct and union diff ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,188 @@
+Rever the bits 
+i/p=  int num , number of bits
+
+o/p - bits reversed
+
+ex:  j-0001 0000 0000 0000 0000 0000 0000 i
+0/p  0000 0000 0000 0000 0000 0000 1000 
+
+1000
+
+ 1<<4 
+ 
+   1000
+ ^ 0001 (1<<0)
+o/p1001
+
+   1001
+^  1000 (1<<4)
+o/p0001
+
+void reverse_bits(int num, int no_bits)
+{
+	int i,j,m,n;
+	
+	
+	for(i=0,j=no_bits-1 ; i<j ; i++,j--)
+	{
+		//Identify which bit is set
+
+		n=(num>>i) & 1;
+		m=(num>>j) & 1;
+		
+		// if m and n are different then just toggle the bits
+		if(n != m)
+		{
+			num=num ^ (1<<i);
+			num=num ^ (1<<j);
+		}
+	
+	}
+	printf("Reverse of num %d \n", num);
+} 
+
+
+
+2- Find pair of elements who's sum is given number ?
+arr[n] ={1,2,3,4,5,.....}
+
+int i=10;
+
+int alogo()
+{
+	1 -> 10-1 = 9(j)
+	2-> 10-2 = 8(j)
+	
+for 0 -n        - n 
+    ------
+    for 1- n-1  -  n-1*n time
+	
+	
+
+for (i=0 -> n)
+	for(j=i+1 - n )  -   n-i*n time  
+
+}
+
+
+
+
+
+
+WAP to print ven and off with 2 threads with synchronization.
+
+
+pthread_cond_t * cond=NULL;
+pthread_mutex_t mutex=PTHREAD_MUTEX_INITIALIZER;
+
+
+int cnt=0;
+int number=1;
+
+void *thread_fun(void *arg)
+{
+	int turn=*(int *)arg;    //Identity of thread
+
+	while(1)
+	{
+		pthread_mute_lock(&mutex);
+		
+		if(turn != cnt)
+		{
+			pthread_cond_wait(&cond[turn],&mutex);  // stop thread and release mutex
+		}
+	
+		printf("%d ",number++);
+	
+		if(cnt < thread/(2) -1)
+			cnt++;
+		else
+			cnt=0;
+	
+		pthread_cond_signal(&cond[cnt]);   // unlock cnt thread if it is locked
+		pthread_mutex_unlock(&mutex);
+	}
+
+	return NULL:
+
+}
+
+
+main()
+{
+	phread_t tid[2]={0};
+	
+	int arr[2]={0};
+	
+	cond=(pthread *)malloc(sizeof(pthread)*2);
+	
+	// initialize cond variable
+	for(i=0;i<2;i++)
+	{
+		if(pthread_cond_init(&cond[i],NULL)!=NULL)
+		{
+			perror("pthread_cond_init()");
+			exit(1);
+		}
+	}
+	
+	// create threads
+	for(i=0;i<2;i++)
+	{
+		arr[i]=i;
+		pthread_create(&tid[i],NULL,thread_func,(void *)&arr[i]);
+		
+	}
+
+	for(i=0;i<2;i++)
+	{
+		pthread_join(tid[i],NULL);
+	}
+
+	return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

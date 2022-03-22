@@ -1,0 +1,456 @@
+Linkd List Program  Pratice
+
+1- WAP to find iven linked list is pallindrome or not.
+// use stack to find pallindrome or not
+
+int c=0;
+int arr[c],max=c,top=0;
+
+void push(struct Node *ptr)
+{
+	
+	if(ptr)
+	{
+		if(top > max)
+		{
+			printf("overflow\n");
+			return;
+		}
+		else
+		{
+			arr[top]=ptr->data;
+			top++;
+			ptr=ptr->next;
+		}
+	}
+}
+
+
+int push(struct Node *ptr)
+{
+	int data;
+	if(ptr)
+	{
+		if(top < 0)
+		{
+			prinft("underflow \n");
+			return 0;
+		}
+		else
+		{
+			data=arr[top];
+			top--;
+			if(data != ptr->data)
+				retrun 0;
+			prt=ptr->data;
+		}
+	
+	
+	}
+	retrun 1;
+
+}
+
+
+void pallindrome(struct Node *head)
+{
+	c=count(head);
+	push(head);
+	
+	int r=pop(head);
+	if(r==0)
+		printf("not pallindrome");
+	else
+		printf("pallindrome\n");
+
+}
+
+
+
+
+2- WAP to find repeting node in linked list ?
+3- WAP to remove duplicate from unsoted LL.
+12->11->12->21->41->43->21
+o/p  12-11-21->41->43
+
+
+void remove_duplicate(struct Node *head)
+{
+		struct Node *first=head;
+		struct Node *second=head->next;
+		struct Node *tmp, *prev=head;
+	while(head && second)
+	{
+
+		
+		while(second)
+		{
+			if(first->data == second->data)
+			{
+				prev->next=second->next;
+				tmp=second;
+				second=second->next;
+				
+				free(tmp);
+			}
+			else
+			{
+				prev=second;
+				second=second->next;
+			}
+		
+		}
+		first=first->next;
+		second=first->next;
+	}
+		
+}
+
+4- WAP tp remove the dup elements
+   2->  3->      3->5->9->12->15->15
+prev    present
+
+struct dup_list{
+
+	int data;
+	struct dup_list *next;
+}
+
+
+void dup_rm(struct duP_list  *hptr)
+{
+
+	struct dup_list *prev, *present, *tmp;
+	
+	/* delete duplicate a node  */	
+	if(hptr != NULL)    // check hptr is enpty or not 
+	{
+		prev=hptr;
+		present=hptr->next;
+		while(present)
+		{
+			
+			if(prev->data == present->data)
+			{
+ 				tmp=present;
+				present=present->next;
+				prev->next=present;
+			
+				free(tmp);
+				continue;
+			}
+			prev=prev->next;
+			present=present->next;
+		
+	}
+			
+			
+}		
+
+5-  WAP to delete the element position from last
+i/p -4->5->7->9->11->15->21->35->39
+i/p position -> 3
+
+
+void delete(struct Node *head, int pos)
+{
+	struct Node *first=head, *second=head, *prev;
+	int i=0;
+	
+	while(i<pos)
+	{
+		if(first)
+			first=first->next;
+		else	
+			return -1;
+		i++;
+	}
+	
+	while(first)
+	{
+		prev=second;
+		second=second->next;
+		first=first->next;
+	}
+	
+	prev->next=second->next;
+	free(second);
+
+}
+
+6- Delete a node provided only its ptr not hptr;
+
+void delete( *ptr)
+{
+	struct Node *prev=ptr;
+	
+	ptr=ptr->next;
+	prev->data=ptr->data;
+	
+	prev->next=ptr->next;
+	free(ptr);
+
+}
+
+
+7- WAP to delete the loop in linke list.
+1->2->3->4->5->6->7
+
+void delete_loop(struct Node *head)
+{
+	
+	// find the loop in linklist
+	strcut Node *fast=head, *slow=head;
+	while(fast && slow && fast!=slow && fast->next)
+	{
+		fast=fast->next->next;
+		slow=slow->next;
+	}
+	
+	if(fast == slow)
+		printf("loop detected \n");
+	else
+	{
+		printf("no loop \n")
+		return 0;
+	}
+
+	// detect the start of loop
+	strcut Node *prev=fast;
+	slow=head;
+	while(slow!=fast)
+	{
+		slow=slow->next;
+		prev=fast;
+		fast=fast->next;
+	
+	}
+	
+	// to remove the loop
+	if(slow == fast)
+		prev->next=NULL:
+
+
+}
+
+8- Rever words in a given string
+i/p I love pogrammig very much
+o/p  much very programming love I
+
+step 1 ->  hcum  yrev gnimmargorp evol I
+step 2 ->  much very programming love I
+ 
+void reverse_string(char *str)
+{
+	// Step 1 reverse the string
+	
+	int i,j,k,l;
+	char ch;
+	
+	for(l=0;str[l];l++);
+	
+	for(i=0,j=l-1;i<j;i++,j--)
+	{
+			ch=str[i];
+			str[i]=str[j];
+			str[j]=ch;
+	}
+	
+	// step 2
+	
+	for(i=0,k=0; str[i] ;i++)
+	{
+		if(str[i] == ' ' || str[i+1] == '\0')
+		{
+			if(str[i+1] == '\0')
+				j=i;
+			else	
+				j=i-1;
+			
+			for(; k<j; j--,k++)
+			{
+				ch=str[i];
+				str[i]=str[j];
+				str[j]=ch;
+			}
+			k=i+1;
+		}
+	
+	}
+
+
+}
+
+
+
+9- WAP to toggle the bit?
+
+  int num
+  
+  for(i=0,j=31;i<j;i++,j--)
+  {
+	m=(num>>i) & 1;
+	n=(num>>j) & 1;
+
+		if(m!=n)
+		{
+			num=num^(1<<i);
+			num=num^(1<<j);
+		}
+  }
+
+
+10- Delete a note in Tree
+
+
+3 Cases
+1- No child
+2- one child
+3- 2 child
+
+TE *parent;
+TE *search(TE *ptr,int data)
+{
+	if(ptr==NULL)
+		return ;
+	else if(ptr->data == data)
+		return ptr;
+	else if(ptr->data > data)
+	{
+		parent=ptr;
+		search(ptr->left,data);
+	}
+	else	
+	{
+		parent=ptr;
+		search(ptr->right,data);
+	}
+
+}
+
+void delete_TE(TE *ptr)
+{
+	TE *q=search(ptr->data)
+	
+	TE *p=parent;
+
+	//case 1
+	if(q->left == NULL && q->right == NULL)
+	{
+		if(q == p->left)
+			p->left=NULL;
+		else	
+			p->right=NULL:
+		free(q);
+		retrun;
+	}
+	
+	//case 2
+	if(q->left == NULL && q->right != NULL)
+	{
+		if(q == p->left)
+			p->left=q->right;
+		else
+			p>right=q->right;
+	}
+	else if(q->left != NULL && q->right == NULL)
+	{
+		if(q = = p->left)
+			p->left=q->left;
+		else
+			p->right=q->left;
+	}
+	
+	// case 3
+	if(q->left!=NULL && q->right!=null)
+	{
+		TE *tmp;
+		tmp=q->right;
+		
+		p=q;
+		
+		while(tmp->let)
+		{
+			p=tmp;
+			tmp=tmp->left;
+		}
+		
+		q->data=tmp->data;
+		
+		p->left=tmp->right;
+		
+		free(tmp;)
+		
+	
+	}
+	
+}
+
+printf
+
+//In order  L P R
+void print(TE *ptr)
+{
+	if(ptr)
+	{
+		print(ptr->left);
+		printf("ptr->data");
+		print(ptr->right);
+	}
+}
+
+// post order- L R P
+// pre order - P L R 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

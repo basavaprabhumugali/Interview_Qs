@@ -1,0 +1,6 @@
+synconization techniques  
+git
+what is diff b/w git and repo ?
+
+
+

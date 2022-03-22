@@ -1,0 +1,50 @@
+NVDN 1st Round
+
+LDD basic function ?
+How userspace app communiate with kernel drivers ?
+linux sdk,provide linux i2c driver  , how do u integrade ?
+I2c , SPI 
+LK 
+device tree probe and all 
+Boting sequence 
+-> Jithin Kulirthodi5:28 PM
+{
+int a=10;
+int *p;
+p= &a;
+
+printf("%d\n",a);
+printf("%u\n",(unsigned int *)&a);
+printf("%d\n",*p);
+printf("%u\n",p);
+printf("%u\n",*(unsigned int *)&a);
+return;
+}
+You5:28 PM
+10
+Jithin Kulirthodi5:31 PM
+int a,b,c,d,f;
+a = 0;
+b= a++;
+c = ++a;
+d = a--;
+f = --a;
+ 
+ Nvdn 2nd Round
+ 
+ LSP 
+ 1- How in part of memory thread and process will be different ?
+ 2- Thread -> how threads are different then processes in therms of memory
+ 3- what are different scheduling thechiniques ? 
+  6- Syncronozation : mutex, semaphores
+  
+ Controllers
+ 3- I2c (Speed, frame(r/w), Bus Arbitration )
+ 4- What is difference b.w SPI and I2c (speed diff)
+ 5- Interrupts -> h/w interrupt , top and bottom halves,
+ 
+ 
+ Bootloader 
+ 1- What is function of bootloader ?
+ 2- What types of issues you resolved in bootloader ?
+ 3- 

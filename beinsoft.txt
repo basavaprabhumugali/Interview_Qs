@@ -1,0 +1,126 @@
+Big Endian 
+1- WAP to find LI or BI
+
+typedef union buf{
+	int i;
+	char ch;
+}O;
+
+main()
+{
+	int i=1;
+	char *ch=&i;
+	if(*ch==0)
+		pf("BI");
+	lse
+		pf("LI")	
+
+---------OR-----------
+
+	o.i=1;
+	if(ch==1)
+		pf("LI");
+	else
+		pf("BI");
+}
+
+
+
+
+
+2-
+
+  void show_mem_rep(char *start, int n)
+{
+int i;
+for (i = 0; i < n; i++)
+printf(" %.2x", start[i]);
+printf("\n");
+}
+
+int main()
+{
+int i = 0x01234567;
+show_mem_rep((char *)&i, sizeof(i));
+getchar();
+return 0;
+}
+
+o/p - 
+
+3- how direction stack is growing ? Recursion
+
+4- function call mechanism behind ?
+
+5- calloc / malloc diff?
+   which is fastr?
+
+6- wild pointer ? pointer with garbage value
+   Null Pointer ? 
+   how does free know how much memory to free?
+
+7- 
+
+
+int main(void)
+{
+int i;
+int *ptr = (int *) malloc(5 * sizeof(int));
+for (i=0; i<5; i++)
+*(ptr + i) = i;
+printf("%d ", *ptr++);
+printf("%d ", (*ptr)++);
+printf("%d ", *ptr);
+printf("%d ", *++ptr); ----> not able to answer
+printf("%d ", ++*ptr);--> not able to answer
+}
+
+int main(void)
+{
+int i;
+int *ptr = (int *) malloc(5 * sizeof(int));
+for (i=0; i<5; i++)
+*(ptr + i) =                                                                                                                   
+printf("%d ", *ptr++);
+printf("%d ", (*ptr)++);
+printf("%d ", *ptr);
+printf("%d ", *++ptr);
+printf("%d ", ++*ptr);
+}  
+
+
+
+
+8- no. od set bit it an integer
+
+  main()
+ {
+   int n=4,i;
+   int count=0;
+ 
+  for(i=0;i<31;i=i*i)
+   {
+      k=n&i;
+	if(k==1)
+		count++;
+      k=0;
+   }	
+
+ } 
+
+
+9- qualifiers in c
+  1- const
+  2- volatile 
+
+ 
+
+
+
+
+
+
+
+
+
+

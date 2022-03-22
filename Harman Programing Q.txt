@@ -1,0 +1,78 @@
+
+
+
+main()
+{
+
+    // I/p 
+	char *p= "......"
+	char *pos=p;
+	char c1, c2;
+	char **out;
+	out= (char **)malloc(2*sizeof(char *));
+	int i,j;
+
+// Read and store all Payload
+ for(j=0;i<2;j++)
+{ 
+	pos += 2;
+	c1=*pos;
+	pos++;
+	c2=*pos;
+	pos++;
+	
+	c1=c1+c2;
+	 out[j] = (char *)malloc(c1*sizeof(char));
+	
+	for(i=0; i<c1; i++)
+	{
+		out[j][i]=*pos;
+		pos++
+	}
+	
+}	
+	
+//Copy payload back to frame
+
+pos++;
+int size;
+
+for (i=0;i<2;i++)
+{
+	size=sizeof(out[i]);   // size of each payload
+	
+	for(j=0;j<size;j++)
+	{
+	  *pos=out[i][j];
+	   pos++;
+	 }
+
+}
+
+
+https://www.youtube.com/watch?v=AyOW4kazy
+7618727886
+
+https://www.youtube.com/watch?v=AyOW4kazy54
+from Ishaqe Ahamed (internal) to everyone:    10:55 AM
+https://www.linkedin.com/in/ishaqe-ahamed-006b5821/
+
+ishaqe.ahamed@harman.com
+
+}
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
+}

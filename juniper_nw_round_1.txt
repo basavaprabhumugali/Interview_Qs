@@ -1,0 +1,295 @@
+WAP of thread  which will print even and odd numbers (1 - 100 ) one by one .
+
+
+int cnt=0;
+
+arr -> 0 ,1
+
+
+void *thread(void *arg)
+{
+
+	int turn=*(int *)arg;
+	
+	while(1)
+	{
+		pthread_mutex_lock(&mutex);
+		if(turn!=cnt)
+			pthread_cond_wait(&cout[turn],&mutex);
+		
+		turn=tuen+1
+		if(turn%2==0)	
+			printf("even=%d\n", turn);
+		else
+			printf("odd=%d\n",turn);
+		if(cnt < thread-1)
+			cnt++;
+		else
+			cnt=0;
+			
+		pthread_cond_signal(&cond[cnt]);
+		pthread_mutex_unlock(&mutex)
+	}
+	
+	return NULL;
+
+}
+
+
+
+
+
+main()
+{
+	pthread *tid;
+	int i,j,k;
+	int x,num_thread;
+	int *arr;
+	
+	printf("how many thead we want");
+	scanf("%d", &num_thread);
+	
+	cond=(pthread_t *)malloc(sizeof(pthread_t)*num_thread);
+	arr=(int *)malloc(sizeof(int)*num_thread);
+	
+	for(i=0;i<num_thread;i++)
+	{
+		if(pthread_cond_init(&cond[i],NULL)!=0)
+		{
+			perror("pthread_cond_int()");
+		}
+	
+	}
+	
+	//create thread
+	
+	for(i=0;i<num_thread;i++)
+	{
+		arr[i]=i;
+		pthread_create(&tid[i],NULL,thread,&x);
+	}
+	
+	
+	o/ 1- odd
+	   2- even
+	   .....
+	
+
+
+}
+
+
+
+a.h
+
+struct text *ptr;
+
+b.h
+
+struct text *getops(void);
+
+b.c
+
+struct text ops;
+#include<b.h>
+
+struct text *getops(void)
+{
+
+	retrun &ops;   64 bit
+
+}
+
+test.c
+
+#include<a.h>
+
+ptr=getops();    ptr= 32bit
+ 
+
+getops don'y have return 
+
+
+
+kdump
+
+SPI I2C
+
+What is diff b/w IPC and ioctl?
+
+
+
+
+Q- WAP to print even and odd using thread?
+
+with two thread
+int count=0;
+pthread_mutex_t mutex;
+int cnt=0;
+void *thread(void *arg)
+{
+
+	int turn = *(int *)arg;
+	while(count!=0)
+	{
+		pthread_mutex_lock(&mutex);
+		
+		if(turn!=cnt)
+		{
+			pthread_cond_wait(&cond[cnt],&mutex);  // it will wait and release mutex
+		}
+		
+		count++;
+		if(count%2 == 0)
+			printf("%d - even",count);
+		else	
+			printf("%d - odd",count);
+		
+		
+		if(cnt < no_thread)
+			cnt++
+		else
+			cnt=0;
+			
+		pthread_cond_signal(&cond[cnt]);	
+		pthread_mtex_unlock(&mutex);
+	
+	}
+	return NULL;
+
+}
+
+
+
+
+
+
+
+
+
+with 1 tread
+int count=0;
+
+void *pthread(void *arg)
+{
+	int turn=*(int *)arg;
+	
+	while(count!=100)
+	{
+		count++;
+		if(count%2 == 0)
+			printf("%d - even",count);
+		else	
+			printf("%d - odd",count);
+		
+	}
+
+	pthread_exit("Good Bye");
+
+}
+
+pthread_cond_t cond;
+
+main()
+{
+	pthread_t tid;
+	int ret;
+	int arr[2]={0,1};
+
+	if(pthread_cond_init(&cond[i],NULL)!=0) 
+		-> fails;
+
+
+
+	
+	ret= pthread_create(&tid, NULL, thread, arr);
+	if(ret!=0)
+		printf("pthread_create failed to create \n");
+		
+	har *data;
+	pthread_join(&tid,&data);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

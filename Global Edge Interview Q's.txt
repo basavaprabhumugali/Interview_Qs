@@ -1,0 +1,31 @@
+1- What is volatile?  What are advanage of volatile?
+Ans-  When a multithreaded program is running, and there is some shared variable which isn't declared as volatile, 
+      what these threads do is create a local copy of the variable, and work on the local copy instead. So the changes on the variable aren't reflected.\
+      This local copy is created because cached memory access is much faster compared to accessing variables from main memory.
+
+     When you declare a variable as volatile, it tells the program NOT to create any local copy of the variable and use the variable directly from the main memory.
+
+     By declaring a variable as volatile, we are telling the system that its value can change unexpectedly from anywhere, 
+     so always 
+   i-  use the value which is kept in the main memory and 
+   ii- always make changes to the value of the variable in the main memory and  
+     not create any local copies of the variable.
+
+     Note that volatile is not a substitute for synchronization, and when a field is declared volatile, the compiler and runtime are put on notice 
+     that this variable is shared and that operations on it should not be reordered with other memory operations.
+     Volatile variables are not cached in registers or in caches where they are hidden from other processors,
+      so a read of a volatile variable always returns the most recent write by any thread.
+
+2- Memory Layout 
+Ans:  1- Code-> read only
+      2- data->  uninitialized ->  assign 0 to all variables (ex: static variable)
+                 initialized
+      3- heap -> can grow
+      4- stack -> GV 
+      5- Cmd line arguments
+      6- Libraries (ex:  gcc, glibc) 
+
+3- How can we exclude including multiple same headers ?
+Ans:  Conditional Compilaton
+ 
+ #ifdef #endif , #ifndef #endif

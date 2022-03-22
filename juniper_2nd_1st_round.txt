@@ -1,0 +1,147 @@
+1- WAP to find given numbe ris power of two
+
+void poewer_two(int number)
+{
+	if((number & (number-1)) == 0)
+		printf("Number is power of two\n")
+	else
+		printf("Number is not power of two\n");
+
+}
+
+2- Func to toggle the bit
+
+void toggle(int num,int pos)
+{
+	num= num ^ (1 << pos);
+	printf("after toggled= %d \n",num);
+}
+
+Data stucture
+
+3- WAP to find the loop in linked list
+
+struct Node{
+	int data;
+	struct Node *next;
+};
+
+void loop(struct Node *head)
+{
+	struct Node *slow=head;
+	strcut Node *fast=head;
+	
+	// find the loop in LL
+	while(slow && fast && fast->next && slow != fast && fast->next->next)
+	{
+		slow=slow->next;
+		fast=fast->next->next;
+	}
+	
+	if(slow == fast)
+		printf("Loop is present \n");
+	else
+	{
+		printf("Loop is not present\n");
+		return;
+	}
+	
+	// stating point of loop
+	slow=head;
+	
+	while(fast!=slow)
+	{
+		slow=slow->next;
+		fast=fast->next;
+	}
+	
+	if(slow == fast)
+		printf("start of loop %p",slow);
+		
+	
+} 
+
+1->2->3->4->-5
+
+
+4- WAP
+
+L1 - 
+L2 -  list will merge in L1 at particular point and travs with L1
+
+
+L1- 1->2->3->4->5
+L2- a->b->3
+
+1->2->3->4->5
+	a->3
+int length(struct Node *ptr)
+{
+	int count=0;
+	if(ptr)
+	{
+		count++;
+		ptr->next;
+	}
+
+	return count;
+}
+
+
+void find_mege(struct Node *l1, struct Node *l2)
+{
+	int c1,c2,i,j;
+	c1=length(l1);
+	c2=length(l2);
+	
+	// move l1 or l2 whichever is greater
+	if(c1 > c2)
+	{
+		for(i=0;i<c1-c2;i++)   //Let c1= 5 c2= 3 ,  c1-c2=2
+			l1=l1->next;
+	}
+	else
+	{
+		for(i=0;i<c2-c1;i++)
+			l2=l2-next;
+	}
+
+	while(l1 != l2)
+	{
+		l1=l1->next;
+		l2=l2->next;
+	}
+	
+	if(l1 == l2)
+		printf("This is intersection point %p \n",l1);
+	
+}
+
+
+WAP 
+
+int x;
+int a=2;
+static int b;
+int main()
+{
+	static int c;
+	int d;
+	while(1)       // at some point m/e should
+		int *ptr=malloc(1000*sizeof(int));  // 4k bytes
+//	int *ptr1=calloc(1000,sizeof(int)); //  
+	
+	return 0;
+}
+
+free()  - it will inform how memory is left
+
+stack -  d 
+heap  - ptr , ptr1
+data - unintialized section(Block started of section)
+	 - intialized section -> a , c , b,x
+code
+
+
+
+

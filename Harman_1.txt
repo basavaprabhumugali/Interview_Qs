@@ -1,0 +1,97 @@
+1- Explain ur projects what all you worked ?
+2- Boot up sequence ?
+3- Char driver , major and minor number, /dev/node
+    How fops works, how do we call function calls to open read n write?
+4- shutdown driver what is purpose of ur driver and application ?
+5- How u worte Interupt handler, interrupt register ?
+6- Botton halves and Top Halves ?
+7-  Which context tasklet and softriq runs ?  Ans ->  Interrupt context -> because sleep is not allowed 
+The softirq and tasklet are both kind of bottom-halves mechanism. Sleep is not allowed becuase they run under interrupt context not process context. 
+If sleep is allowed, then the linux cannot schedule them and finally cause a kernel panic with a dequeue_task error. 
+
+Workqueue in Linux Kernel – Executed in a process context.
+Threaded IRQ
+Softirq – Executed in an atomic context.
+Tasklet – Executed in an atomic context.
+
+8- Device Tree ->
+	What all properties we have name them ?
+	How to bring in them ?
+	
+9- How to Kernel compilation?
+10- Kernel Upgrade -
+  What to u did ?
+  Explain real issues u idenfied and hwo to solved ?  one is null pointer how u debugged? 
+  Which debugger used ? Printk , Jtag 
+  Error:  Parser error, null pointer return error, 
+
+11- How to access h/w registers ? Eample of set a gpio n reset n toggle (learning project)?  
+
+12-  WAP to find middle of a linked list?  Used 1st and 2nd ptr ->  move1st ptr by one stp and 2ndptr by 2 step and when 2ndptr reaches end of LL then 1st ptr will be at middle of LL. 
+13- WAP macro to toggle a bit ?
+#define toggle(a,b)  a^(1<<b) 
+
+14- Static Analysis -> what kind of issues you resolved ?
+
+15- > In y2038 -> what kernel changes u did?
+
+16> What all kernel changes u did ?
+
+17- Explai delayed_workqueue()
+18- Copy_to_user and copy_frm_user ?  How to they diff from memcpy ?
+https://stackoverflow.com/questions/14970698/copy-to-user-vs-memcpy
+
+
+
+
+
+
+
+
+
+
+1- WAP to idenfiy the middle of the linked list 
+
+struct student {
+	int roll;
+	sturct student *next;
+//	struct student *prev;
+};
+
+example :  hptr ->  1->2->3->4->5->6->7->->8->9->10
+
+void middle (struct stuent *hptr)
+{
+
+	struct *first=hptr , *second=hptr ;
+// first ptr by 1 step 
+// seconf by 2 steps	
+
+	while(second != 0)
+	{
+		first=firt->next;            // move by 1step
+		second=second->next->next;   // move by 2 step
+	}
+
+	return first; // pointing middle of linked list
+}
+
+
+WAP macro to toggle a bit
+a, bit
+a=10    0000 1010
+        0001 0000   
+		crt logic for xor
+		 00 1
+		 01 1
+		 10 1
+		 11 0
+#define toggle(a,b)   a^(1<<b)
+a= number
+b= position
+
+main()
+{
+	int a=10;
+	int b=4;
+}

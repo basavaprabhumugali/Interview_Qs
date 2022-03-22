@@ -1,0 +1,81 @@
+1- Define a data structure named car that has these properties:
+
+	Name (String)
+	Model (String)
+	Make (Integer)
+
+	Mutex 
+
+In your main program
+
+Create a thread
+
+1- Inside Thread #1, create a CAR with this information: {BMW, Series 3, 2019} with a mutex to access this information. You must use Dynamic Memory allocation.
+
+2- In the same thread create another thread and pass the structure to a new thread
+
+3- Thread #2, must print this car information by holding the mutex and then exit after 5 Seconds of sleep
+
+4- Thread #1 has to wait until Thread #2 completes the execution and then frees the memory allocated to the CAR before it exists.
+
+5- Main will exit when Thread #1 completes the execution by printing “Good Bye!”
+
+
+struct car{
+	char *name;
+	char *model;
+	int make;
+};
+
+pthread_mutex_t mutex;
+
+void * thread2(void *arg)
+{
+	strcuct car *object2=(struct char *)arg;
+	
+	pthread_mutex_lock(&mutex);
+	
+	printf("Name=%s , Model=%s , Make=%d\n",object2->name,object2->model,object2->make);
+	sleep(5);    
+	
+	pthread_mutex_unlock(&mutex);
+
+}
+
+
+void * thread1(void *arg)
+{
+	pthread_t *tid2;
+	
+	struct car objet;
+	object->name=(char *)calloc(4,sizeof(char));
+	object->model=(char *)calloc(9,sizeof(char));
+	
+	object={"BMW","Series 3",2019};   // not able to copy
+	
+	strcpy(object->name,"BMW");
+	strcpy(object->model,"series 3");
+
+	pthread_create(&tid2, NULL, thread2, &bject);
+	
+	pthread_join(&tid2, NULL);
+	
+	free(object->name);
+	free(object->model);
+	
+	pthread_exit("Good Bye");
+
+}
+
+
+
+main()
+{
+
+	pthread_t *tid;
+	char *exit;
+	pthread_create(&tid, NULL, thread1, "Hello");
+	
+	pthread_join(&tid,&exit);
+
+}

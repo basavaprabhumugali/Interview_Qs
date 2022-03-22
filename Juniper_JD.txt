@@ -1,0 +1,41 @@
+Job Description
+Who are we looking for?
+
+Upbeat and hardworking engineers with can-do demeanor to become part of Juniper success story.
+
+About Platform Team
+
+Our team in Juniper is responsible for driving technology leadership in the Juniper routing, switching, enterprise, access and aggregation routers developments for next generation 5G networks, deployed in some of the world’s largest service provider, data center, enterprise and metro ethernet networks.
+
+We are driving Juniper’s growth in revenue and market share in service provider, data center, enterprise, access, and aggregation space, by delivering market leading products with continuous innovation and relentless execution. These products (either modular or chassis based) are based on either Juniper homegrown switching ASIC or based on merchant silicon.
+
+Responsibilities
+
+You will be part of this platform team, responsible for developing platform software in the areas of:
+Board-bring up related experience.
+10G, 40G, 100G and 400G interface related platform software like interface drivers etc.
+Platform infrastructure related software like Chassis/line card, fabric, Optics etc.
+You will be responsible for these product developments in the platform area in either JunOS or Junos Evoled based software architecture.
+In addition to the development activity, you are required to work closely with system and solution test teams to ensure products/solutions delivered are with highest quality.
+You will be required to work closely with Juniper Technical Assistance Team for providing engineering assistance in supporting critical customer escalations for customer deployments.
+Requirements
+
+BTech / MTech in CS/CE or related field with 2-5 years proven experience.
+In-depth knowledge of data networking, e.g., TCP/IP, Ethernet, and Routing etc.
+Proficiency with device drivers, system bring-up, FreeBSD/Linux internals.
+Understanding of Ethernet, OTN, SONET etc. technologies desired
+Strong technical, analytical, and problem-solving skills.
+Strong in C, C++ programming, OO analysis & design, data structures and system debugging skills.
+Good understanding of firmware, hardware level details for Optics, PCIe, SPI, I2C, Retimers, FPGA, CPLD, MDIO, Flash Driver
+Prior software development experience on networking products would be a plus.
+About Juniper
+
+7 out of 8 of the world’s largest stock exchanges run on JUNIPER.
+86 % of all mobile traffic runs across JUNIPER Routers, Switches and Firewalls
+Top 130 Services providers in the world run JUNIPER.
+Fortune 100 companies rely on JUNIPER.
+Juniper is an Equal Opportunity workplace and Affirmative Action employer. We do not discriminate in employment decisions on the basis of race, color, religion, gender (including pregnancy), national origin, political affiliation, sexual orientation, gender identity or expression, marital status, disability, genetic information, age, veteran status, or any other applicable legally protected characteristic. All employment decisions are made based on individual qualifications, merit, and business need.
+
+We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform crucial job functions, and to receive other benefits and privileges of employment. Please contact us to request accommodation.
+
+ 
